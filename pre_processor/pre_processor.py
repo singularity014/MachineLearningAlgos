@@ -6,7 +6,6 @@ from sklearn.impute import SimpleImputer
 import matplotlib.pyplot as plt
 
 
-
 def data_loader(data_path, split=True):
 
     """
