@@ -68,5 +68,4 @@ if __name__ == "__main__":
     df, X, y = data_loader(dat_path)
 
     X = missing_data_handler(X)
-    print()
     X, y = cat_encoding(X, y)
