@@ -2,9 +2,26 @@
 import numpy as np
 import pandas as pd
 from sklearn.impute import SimpleImputer
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import OneHotEncoder, LabelEncoder
 
 import matplotlib.pyplot as plt
 
+
+def cat_encoding(X, y):
+
+    # Feature encodings
+    ct = ColumnTransformer(transformers=[('encoder',
+                                          OneHotEncoder(),
+                                          [0])],
+                           remainder='passthrough')
+    X = np.array(ct.fit_transform(X))
+    print(X)
+    # Label encoding
+    le = LabelEncoder()
+    y = le.fit_transform(y)
+    print(y)
+    return X, y
 
 
 def data_loader(data_path, split=True):
@@ -49,4 +66,6 @@ if __name__ == "__main__":
     dat_path = "../DataSets/pre_processing_sample.csv"
     df, X, y = data_loader(dat_path)
 
-    missing_data_handler(X)
+    X = missing_data_handler(X)
+    print()
+    X, y = cat_encoding(X, y)
