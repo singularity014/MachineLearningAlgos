@@ -1,13 +1,12 @@
 # import libs
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder, LabelEncoder
 from sklearn.model_selection import train_test_split
-
-import matplotlib.pyplot as plt
 
 
 def cat_encoding(X, y):
