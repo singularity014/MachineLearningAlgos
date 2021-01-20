@@ -4,6 +4,7 @@ import pandas as pd
 from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder, LabelEncoder
+from sklearn.model_selection import train_test_split
 
 import matplotlib.pyplot as plt
 
@@ -22,6 +23,18 @@ def cat_encoding(X, y):
     y = le.fit_transform(y)
     print(y)
     return X, y
+
+
+def data_splits(X, y):
+    
+    """
+    For train test split ...
+    :param X: Feature matrix
+    :param y: label array
+    :return: train test splits
+    """
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
+    return X_test, X_test, y_train, y_test
 
 
 def data_loader(data_path, split=True):
