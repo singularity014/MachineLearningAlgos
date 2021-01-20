@@ -10,6 +10,10 @@ Contains hands-on implementation of ML algorims and following content.
 6. Random Forest.
 
 Evaluation of the models.
+Hyper-parameter Tuning
+Grid Search 
+Model Selection
+Feature Engineering.
 
 
 
