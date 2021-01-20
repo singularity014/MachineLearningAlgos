@@ -70,7 +70,6 @@ def missing_data_handler(X):
     imputer.fit(X[:, [1, 2]])
     X[:, [1, 2]] = imputer.transform(X[:, [1, 2]])
     print('After imputing (Mean)...')
-    print(X)
     return X
 
 
