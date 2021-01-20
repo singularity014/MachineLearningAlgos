@@ -9,6 +9,11 @@ Contains hands-on implementation of ML algorims and following content.
 5. Decision Tree.
 6. Random Forest.
 
+# Classification
+1. Logistic Regression
+2. SVM
+3. DNN
+
 ### Other concepts convered
 
 * Evaluation of the models.
