@@ -9,6 +9,8 @@ Contains hands-on implementation of ML algorims and following content.
 5. Decision Tree.
 6. Random Forest.
 
+Other concepts convered
+
 * Evaluation of the models.
 * Hyper-parameter Tuning
 * Grid Search 
